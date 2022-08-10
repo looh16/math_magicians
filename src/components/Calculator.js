@@ -10,7 +10,7 @@ class Calculator extends Component {
         <div className="box right">AC</div>
         <div className="box right">+/-</div>
         <div className="box right">%</div>
-        <div className="box left">/</div>
+        <div className="box left">÷</div>
         <div className="box right">7</div>
         <div className="box right">8</div>
         <div className="box right">9</div>
