@@ -2,7 +2,7 @@
 
 # Math Magicians
 
->Project Setup.
+>UI of the calculator.
 
 
 ## Built With
