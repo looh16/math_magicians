@@ -1,31 +1,46 @@
 import React, { Component } from 'react';
+import calculate from '../logic/calculate';
 import './Calculator.css';
 
-// eslint-disable-next-line react/prefer-stateless-function
 class Calculator extends Component {
+  constructor(props) {
+    super(props);
+    this.state = ({});
+    this.calculatorClickHandle = this.calculatorClickHandle.bind(this);
+  }
+
+  calculatorClickHandle(e) {
+    this.setState((state) => calculate(state, e.target.innerText));
+  }
+
   render() {
+    const { next, total, operation } = this.state;
     return (
-      <div className="wrapper">
-        <div className="box a">0</div>
-        <div className="box right">AC</div>
-        <div className="box right">+/-</div>
-        <div className="box right">%</div>
-        <div className="box left">÷</div>
-        <div className="box right">7</div>
-        <div className="box right">8</div>
-        <div className="box right">9</div>
-        <div className="box left">x</div>
-        <div className="box right">4</div>
-        <div className="box right">5</div>
-        <div className="box right">6</div>
-        <div className="box left">-</div>
-        <div className="box right">1</div>
-        <div className="box right">2</div>
-        <div className="box right">3</div>
-        <div className="box left">+</div>
-        <div className="box right">.</div>
-        <div className="box left">=</div>
-        <div className="box vd right">0</div>
+      <div className="container">
+        <p className="box a">
+          <span>{total}</span>
+          <span>{operation}</span>
+          <span>{next}</span>
+        </p>
+        <button type="button" className="box right" onClick={this.calculatorClickHandle}>AC</button>
+        <button type="button" className="box right" onClick={this.calculatorClickHandle}>+/-</button>
+        <button type="button" className="box right" onClick={this.calculatorClickHandle}>%</button>
+        <button type="button" className="box left" onClick={this.calculatorClickHandle}>÷</button>
+        <button type="button" className="box right" onClick={this.calculatorClickHandle}>7</button>
+        <button type="button" className="box right" onClick={this.calculatorClickHandle}>8</button>
+        <button type="button" className="box right" onClick={this.calculatorClickHandle}>9</button>
+        <button type="button" className="box left" onClick={this.calculatorClickHandle}>x</button>
+        <button type="button" className="box right" onClick={this.calculatorClickHandle}>4</button>
+        <button type="button" className="box right" onClick={this.calculatorClickHandle}>5</button>
+        <button type="button" className="box right" onClick={this.calculatorClickHandle}>6</button>
+        <button type="button" className="box left" onClick={this.calculatorClickHandle}>-</button>
+        <button type="button" className="box right" onClick={this.calculatorClickHandle}>1</button>
+        <button type="button" className="box right" onClick={this.calculatorClickHandle}>2</button>
+        <button type="button" className="box right" onClick={this.calculatorClickHandle}>3</button>
+        <button type="button" className="box left" onClick={this.calculatorClickHandle}>+</button>
+        <button type="button" className="box zero right" onClick={this.calculatorClickHandle}>0</button>
+        <button type="button" className="box right" onClick={this.calculatorClickHandle}>.</button>
+        <button type="button" className="box left" onClick={this.calculatorClickHandle}>=</button>
       </div>
     );
   }
