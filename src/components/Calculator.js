@@ -1,49 +1,42 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 import './Calculator.css';
 
-class Calculator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = ({});
-    this.calculatorClickHandle = this.calculatorClickHandle.bind(this);
-  }
+const Calculator = () => {
+  const [objCalc, setobjCalc] = useState({ total: 0, next: null, operation: null });
 
-  calculatorClickHandle(e) {
-    this.setState((state) => calculate(state, e.target.innerText));
-  }
+  const calculatorClickHandle = (e) => {
+    setobjCalc((state) => calculate(state, e.target.innerText));
+  };
 
-  render() {
-    const { next, total, operation } = this.state;
-    return (
-      <div className="container">
-        <p className="box a">
-          <span>{total}</span>
-          <span>{operation}</span>
-          <span>{next}</span>
-        </p>
-        <button type="button" className="box right" onClick={this.calculatorClickHandle}>AC</button>
-        <button type="button" className="box right" onClick={this.calculatorClickHandle}>+/-</button>
-        <button type="button" className="box right" onClick={this.calculatorClickHandle}>%</button>
-        <button type="button" className="box left" onClick={this.calculatorClickHandle}>÷</button>
-        <button type="button" className="box right" onClick={this.calculatorClickHandle}>7</button>
-        <button type="button" className="box right" onClick={this.calculatorClickHandle}>8</button>
-        <button type="button" className="box right" onClick={this.calculatorClickHandle}>9</button>
-        <button type="button" className="box left" onClick={this.calculatorClickHandle}>x</button>
-        <button type="button" className="box right" onClick={this.calculatorClickHandle}>4</button>
-        <button type="button" className="box right" onClick={this.calculatorClickHandle}>5</button>
-        <button type="button" className="box right" onClick={this.calculatorClickHandle}>6</button>
-        <button type="button" className="box left" onClick={this.calculatorClickHandle}>-</button>
-        <button type="button" className="box right" onClick={this.calculatorClickHandle}>1</button>
-        <button type="button" className="box right" onClick={this.calculatorClickHandle}>2</button>
-        <button type="button" className="box right" onClick={this.calculatorClickHandle}>3</button>
-        <button type="button" className="box left" onClick={this.calculatorClickHandle}>+</button>
-        <button type="button" className="box zero right" onClick={this.calculatorClickHandle}>0</button>
-        <button type="button" className="box right" onClick={this.calculatorClickHandle}>.</button>
-        <button type="button" className="box left" onClick={this.calculatorClickHandle}>=</button>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="container">
+      <p className="box a">
+        <span>{objCalc.total}</span>
+        <span>{objCalc.operation}</span>
+        <span>{objCalc.next}</span>
+      </p>
+      <button type="button" className="box right" onClick={calculatorClickHandle}>AC</button>
+      <button type="button" className="box right" onClick={calculatorClickHandle}>+/-</button>
+      <button type="button" className="box right" onClick={calculatorClickHandle}>%</button>
+      <button type="button" className="box left" onClick={calculatorClickHandle}>÷</button>
+      <button type="button" className="box right" onClick={calculatorClickHandle}>7</button>
+      <button type="button" className="box right" onClick={calculatorClickHandle}>8</button>
+      <button type="button" className="box right" onClick={calculatorClickHandle}>9</button>
+      <button type="button" className="box left" onClick={calculatorClickHandle}>x</button>
+      <button type="button" className="box right" onClick={calculatorClickHandle}>4</button>
+      <button type="button" className="box right" onClick={calculatorClickHandle}>5</button>
+      <button type="button" className="box right" onClick={calculatorClickHandle}>6</button>
+      <button type="button" className="box left" onClick={calculatorClickHandle}>-</button>
+      <button type="button" className="box right" onClick={calculatorClickHandle}>1</button>
+      <button type="button" className="box right" onClick={calculatorClickHandle}>2</button>
+      <button type="button" className="box right" onClick={calculatorClickHandle}>3</button>
+      <button type="button" className="box left" onClick={calculatorClickHandle}>+</button>
+      <button type="button" className="box zero right" onClick={calculatorClickHandle}>0</button>
+      <button type="button" className="box right" onClick={calculatorClickHandle}>.</button>
+      <button type="button" className="box left" onClick={calculatorClickHandle}>=</button>
+    </div>
+  );
+};
 
 export default Calculator;
