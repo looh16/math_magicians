@@ -1,6 +1,6 @@
 import React from 'react';
 import Renderer from 'react-test-renderer';
-import Home from '../Components/Home.js';
+import Home from '../Components/Home';
 
 it('renders correctly Home Component', () => {
   const tree = Renderer

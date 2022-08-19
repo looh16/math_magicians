@@ -1,4 +1,4 @@
-import operate from '../logic/operate.js';
+import operate from '../logic/operate';
 
 describe('Addition', () => {
   test('Adding two positive nums', () => {
