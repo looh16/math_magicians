@@ -22,6 +22,14 @@ Any kind of browser.
        - npm install
        - npm start
 
+# Live Demo:
+
+## Heroku 
+https://magicians-math-app.herokuapp.com/
+
+## Netlify
+https://magicians-math-app.netlify.app/
+
 
 ## 👤 **Author**
 
