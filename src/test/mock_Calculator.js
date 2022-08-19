@@ -1,24 +1,15 @@
-import React, { useState } from 'react';
-import calculate from '../logic/calculate';
+import React from 'react';
+// eslint-disable-next-line react/prefer-stateless-function
 
-const Calculator = () => {
-  const [objCalc, setobjCalc] = useState({ total: 0, next: null, operation: null });
+const calculatorClickHandle = jest.fn(() => 3);
 
-  const calculatorClickHandle = (e) => {
-    setobjCalc((state) => calculate(state, e.target.innerText));
-  };
-
-  return (
+const Calculator = () => (
+  <>
     <section className="main-container">
       <div>
         <p>Let do some math</p>
       </div>
       <div className="container">
-        <p className="box a">
-          <span>{objCalc.total}</span>
-          <span>{objCalc.operation}</span>
-          <span>{objCalc.next}</span>
-        </p>
         <button type="button" className="box right" onClick={calculatorClickHandle}>AC</button>
         <button type="button" className="box right" onClick={calculatorClickHandle}>+/-</button>
         <button type="button" className="box right" onClick={calculatorClickHandle}>%</button>
@@ -40,8 +31,6 @@ const Calculator = () => {
         <button type="button" className="box left" onClick={calculatorClickHandle}>=</button>
       </div>
     </section>
-
-  );
-};
-
-export default Calculator;
+  </>
+);
+export { Calculator, calculatorClickHandle };

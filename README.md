@@ -2,7 +2,7 @@
 
 # Math Magicians
 
->UI of the calculator.
+>simple calculator.
 
 
 ## Built With

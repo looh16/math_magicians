@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly Calculator Component  1`] = `
+<section
+  className="main-container"
+>
+  <div>
+    <p>
+      Let do some math
+    </p>
+  </div>
+  <div
+    className="container"
+  >
+    <p
+      className="box a"
+    >
+      <span>
+        0
+      </span>
+      <span />
+      <span />
+    </p>
+    <button
+      className="box right"
+      onClick={[Function]}
+      type="button"
+    >
+      AC
+    </button>
+    <button
+      className="box right"
+      onClick={[Function]}
+      type="button"
+    >
+      +/-
+    </button>
+    <button
+      className="box right"
+      onClick={[Function]}
+      type="button"
+    >
+      %
+    </button>
+    <button
+      className="box left"
+      onClick={[Function]}
+      type="button"
+    >
+      ÷
+    </button>
+    <button
+      className="box right"
+      onClick={[Function]}
+      type="button"
+    >
+      7
+    </button>
+    <button
+      className="box right"
+      onClick={[Function]}
+      type="button"
+    >
+      8
+    </button>
+    <button
+      className="box right"
+      onClick={[Function]}
+      type="button"
+    >
+      9
+    </button>
+    <button
+      className="box left"
+      onClick={[Function]}
+      type="button"
+    >
+      x
+    </button>
+    <button
+      className="box right"
+      onClick={[Function]}
+      type="button"
+    >
+      4
+    </button>
+    <button
+      className="box right"
+      onClick={[Function]}
+      type="button"
+    >
+      5
+    </button>
+    <button
+      className="box right"
+      onClick={[Function]}
+      type="button"
+    >
+      6
+    </button>
+    <button
+      className="box left"
+      onClick={[Function]}
+      type="button"
+    >
+      -
+    </button>
+    <button
+      className="box right"
+      onClick={[Function]}
+      type="button"
+    >
+      1
+    </button>
+    <button
+      className="box right"
+      onClick={[Function]}
+      type="button"
+    >
+      2
+    </button>
+    <button
+      className="box right"
+      onClick={[Function]}
+      type="button"
+    >
+      3
+    </button>
+    <button
+      className="box left"
+      onClick={[Function]}
+      type="button"
+    >
+      +
+    </button>
+    <button
+      className="box zero right"
+      onClick={[Function]}
+      type="button"
+    >
+      0
+    </button>
+    <button
+      className="box right"
+      onClick={[Function]}
+      type="button"
+    >
+      .
+    </button>
+    <button
+      className="box left"
+      onClick={[Function]}
+      type="button"
+    >
+      =
+    </button>
+  </div>
+</section>
+`;
