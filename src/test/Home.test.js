@@ -1,6 +1,5 @@
 import React from 'react';
 import Renderer from 'react-test-renderer';
-/* eslint-disable no-undef */
 import Home from '../Components/Home';
 
 it('renders correctly Home Component', () => {
