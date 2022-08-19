@@ -1,4 +1,4 @@
-import calculate from "../logic/calculate"
+import calculate from '../logic/calculate';
 
 describe('= button', () => {
   test('press = button with no previous inputs', () => {
@@ -11,19 +11,19 @@ describe('= button', () => {
     const result = calculate(object, '=');
     expect(result).toEqual(expected);
   });
-  
+
   test('Press a number with no previous operations', () => {
     const expected = {
-        total: null,
-        next: '5',
-        operation: '+',
-      };
+      total: null,
+      next: '5',
+      operation: '+',
+    };
     const object = {
       total: null,
       next: null,
       operation: '+',
     };
-   
+
     const result = calculate(object, '5');
     expect(result).toEqual(expected);
   });
@@ -35,48 +35,47 @@ describe('= button', () => {
       operation: null,
     };
     const object = {
-        total: '10',
-        next: '5',
-        operation: '+',
-      };
+      total: '10',
+      next: '5',
+      operation: '+',
+    };
     const result = calculate(object, '=');
     expect(result).toEqual(expected);
   });
 });
 
 describe('AC btn', () => {
-    test('Ac button without  inputs', () => {
-      const expected = {
-          total: null,
-          next: null,
-          operation: null,
-        };
-        
-      const object = {
-        total: null,
-        next: null,
-        operation: null,
-      };
-      
-      const result = calculate(object, 'AC');
-      expect(result).toEqual(expected);
-    });
-    test('AC button with previous inputs', () => {
-      const object = {
-        total: '10',
-        next: '5',
-        operation: '+',
-      };
-      const expected = {
-        total: null,
-        next: null,
-        operation: null,
-      };
-      const result = calculate(object, 'AC');
-      expect(result).toEqual(expected);
-    });
+  test('Ac button without  inputs', () => {
+    const expected = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+
+    const object = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+
+    const result = calculate(object, 'AC');
+    expect(result).toEqual(expected);
   });
-  
+  test('AC button with previous inputs', () => {
+    const object = {
+      total: '10',
+      next: '5',
+      operation: '+',
+    };
+    const expected = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+    const result = calculate(object, 'AC');
+    expect(result).toEqual(expected);
+  });
+});
 
 describe('Buttons pressed', () => {
   test('Press a number with no previous inputs', () => {
