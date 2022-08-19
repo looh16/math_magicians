@@ -24,10 +24,10 @@ Any kind of browser.
 
 # Live Demo:
 
-## Heroku 
+### Heroku 
 https://magicians-math-app.herokuapp.com/
 
-## Netlify
+### Netlify
 https://magicians-math-app.netlify.app/
 
 
