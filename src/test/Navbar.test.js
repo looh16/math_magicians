@@ -11,7 +11,7 @@ function MockHeader() {
   );
 }
 
-it('Renders correctly Navbar Component', () => {
+it('Renders correctly Navbar Component ', () => {
   const tree = Renderer
     .create(<MockHeader />)
     .toJSON();
