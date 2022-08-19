@@ -1,4 +1,4 @@
-import calculate from '../logic/calculate';
+import calculate from '../logic/calculate.js';
 
 describe('= button', () => {
   test('press = button with no previous inputs', () => {
