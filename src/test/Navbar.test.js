@@ -1,7 +1,7 @@
 import React from 'react';
 import Renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
-import Navbar from '../Components/Navbar.js';
+import Navbar from '../components/Navbar';
 
 function MockHeader() {
   return (
