@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from 'react';
 import Renderer from 'react-test-renderer';
 import Calculator from '../Components/Calculator';
