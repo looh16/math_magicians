@@ -1,6 +1,6 @@
 import React from 'react';
 import Renderer from 'react-test-renderer';
-import Calculator from '../Components/Calculator.js';
+import Calculator from '../Components/Calculator';
 
 it('renders correctly Calculator Component ', () => {
   const tree = Renderer
